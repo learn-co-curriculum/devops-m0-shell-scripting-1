@@ -70,6 +70,7 @@ number = 6
 NUMBER = 7
 string = "This is a string (of text); notice the double quotes"
 ```
+
 To access the value we stored, we would call the name of the variable preceded by a dollar sign:
 
 ```bash
@@ -94,6 +95,8 @@ This value is what gets stored in our `current_date` variable and summoned by th
 ```bash
 Today is Wed Mar 3 14:15:09 EST 2021
 ```
+
+In shell scripting, variables are named using alphanumeric characters, underscores, and numbers (but cannot start with a number). Conventionally, we use uppercase letters for the shell environment variables, and lowercase letters for variables that only live for the duration of our script.
 
 ## Running shell scripts
 
