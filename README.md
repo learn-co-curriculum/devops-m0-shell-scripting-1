@@ -98,6 +98,26 @@ Today is Wed Mar 3 14:15:09 EST 2021
 
 In shell scripting, variables are named using alphanumeric characters, underscores, and numbers (but cannot start with a number). Conventionally, we use uppercase letters for the shell environment variables, and lowercase letters for variables that only live for the duration of our script.
 
+## Arithmetic
+
+Just like in the standard shell, you can perform basic arithmetic in your shell scripts using the `expr` command.
+
+Here's an example:
+
+```bash
+add_result = $(expr 5 + 3)          # stores 8
+sub_result = $(expr 200 - 150)      # stores 50
+mult_result = $(expr 4 * 2)         # stores 8
+div_result = $(expr 15 / 3)         # stores 5
+mod_result = $(expr 7 % 3)          # stores 1
+```
+
+Most of that should be self-explanatory, although you might be unfamiliar with *modulo*, which uses the `%` operator.
+
+While it may sound technical, all **modulo** means is simply the remainder of a division. So for instance, in the example above, `7 % 3` returns `1` because `3` only goes into `7` twice, leaving a `1` remaining.
+
+While it may seem relatively useless at first glance, modulo is actually very useful for checking if something is divisible by something else since you can just evaluate if the remainder is 0. We'll see an example of this later on in a lab.
+
 ## Running shell scripts
 
 Before executing a shell script, you nee dto ensure that it has the right permissions.
