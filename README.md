@@ -22,7 +22,7 @@ Let's start by dissecting an example of a simple shell script:
 
 ```bash
 #!/bin/bash
-greeting = "Hello world!"
+greeting="Hello world!"
 
 # Print the value of the "greeting" variable
 echo $greeting
@@ -38,7 +38,7 @@ Let's break apart each of the lines:
 - This line specifies what shell interpreter should be used to run the script. In this case, we're using `bash`, but in some cases other shells could be used. For the most part, however, you will see `bash` or `sh` in this line.
 
 ```bash
-greeting = "Hello world!"
+greeting="Hello world!"
 ```
 - This line sets a *variable* called `greeting` and sets its value to `Hello world!`. A **variable** is simply a way of storing a value or set of values. You assign it a name, in this case `greeting`, and then assign it a value with `=`. 
 
@@ -59,16 +59,21 @@ Keep in mind that shell scripts are *whitespace-sensitive*. This means that your
 As we briefly touched on above, variables are a way of temporarily storing data. We can give them any name in order to make it easy to remember what is stored in that location. In practice, variables names are usually descriptive of their contents. For instance, if we would like to store the value of the number five in a variable:
 
 ```bash
-number = 5
+number=5
 ```
-This stores a variable in memory with the name `number` and a value of `5`. Variables can store many types of data such as numbers and strings of text.
+
+This stores a variable in memory with the name `number` and a value of `5`. Variables can store many types of data such as numbers, strings of text, and boolean values (true or false).
+
+```bash
+isReady=false
+string="This is a string (of text); notice the double quotes"
+```
 
 Variable names are case-sensitive and cannot start with a numerical digit, meaning these statements would create two different variables:
 
 ```bash
-number = 6
-NUMBER = 7
-string = "This is a string (of text); notice the double quotes"
+number=6
+NUMBER=7
 ```
 
 To access the value we stored, we would call the name of the variable preceded by a dollar sign:
@@ -105,11 +110,11 @@ Just like in the standard shell, you can perform basic arithmetic in your shell 
 Here's an example:
 
 ```bash
-add_result = $(expr 5 + 3)          # stores 8
-sub_result = $(expr 200 - 150)      # stores 50
-mult_result = $(expr 4 * 2)         # stores 8
-div_result = $(expr 15 / 3)         # stores 5
-mod_result = $(expr 7 % 3)          # stores 1
+add_result=$(expr 5 + 3)          # stores 8
+sub_result=$(expr 200 - 150)      # stores 50
+mult_result=$(expr 4 * 2)         # stores 8
+div_result=$(expr 15 / 3)         # stores 5
+mod_result=$(expr 7 % 3)          # stores 1
 ```
 
 Most of that should be self-explanatory, although you might be unfamiliar with *modulo*, which uses the `%` operator.
