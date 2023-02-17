@@ -8,7 +8,7 @@
 
 ## Introduction
 
-*Shell scripting* is an extremely powerful tool for automating tasks and processing data. It's an essential skill for developers, especially sysadmins and devops engineers.
+*Shell scripting* is an extremely powerful tool for automating tasks and processing data. It's an essential skill for most developers, unquestionably so for sysadmins and devops engineers.
 
 **Shell scripts** are essentially a series of commands that are executed in a shell, like the ones we have been using in the previous chapters. These commands are then saved to a text file, which can be then executed by the shell. They can both receive input and return output.
 
