@@ -52,7 +52,7 @@ echo $greeting
 ```
 - This line prints the `greeting` variable we made. `echo` is the name of a shell command that simply prints what follows it. The `$` sign is prepended to our variable name when we are trying to read from it.
 
-Keep in mind that shell scripts are *whitespace-sensitive*. This means that your script might have issues if it's indented incorrectly. Indentation simply refers to the amount of spaces after the line begins. We'll go more over that later; for now, just keep it in mind.
+Keep in mind that shell scripts are *whitespace-sensitive*. This means that your script might have issues if it's spaced or indented incorrectly. Indentation simply refers to the amount of spaces after the line begins. We'll go more over that later; for now, just keep it in mind, and verify the spacing of your scripts if you are encountering issues.
 
 ## Variables
 
