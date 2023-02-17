@@ -54,6 +54,16 @@ echo $greeting
 
 Keep in mind that shell scripts are *whitespace-sensitive*. This means that your script might have issues if it's spaced or indented incorrectly. Indentation simply refers to the amount of spaces after the line begins. We'll go more over that later; for now, just keep it in mind, and verify the spacing of your scripts if you are encountering issues.
 
+## Command substitution
+
+**Command substitution** is just a fancy way to refer to using commands in our script. For instance, if we want to assign a variable the contents of a folder (using the `ls` command), we would use command substitution to do so. 
+
+In order to substitute a command, all you need to do is wrap it with the `$()` syntax:
+
+`files_in_directory = $(ls)`
+
+That's it!
+
 ## Variables
 
 As we briefly touched on above, variables are a way of temporarily storing data. We can give them any name in order to make it easy to remember what is stored in that location. In practice, variables names are usually descriptive of their contents. For instance, if we would like to store the value of the number five in a variable:
